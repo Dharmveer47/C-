@@ -1,16 +1,29 @@
-//Print all prime number between 2 given number
+//Prime number
 #include<iostream>
 using namespace std;
-int prime(int a, int b)
+int prime(int n)
 {
-    for(int i=a; i<b; i++)
+    int i;
+    for ( i = 2; i < n; i++)
     {
-        if(a%i!=0)
+        if (n%i==0)
         {
-            return i;
+            break;
         }
     }
+    if (i==n)
+    {
+        cout<<n<<" is prime number";
+    }
+    else
+    {
+        cout<<n<<" is not prime number";
+    }
+    return 0;
 }
-int main(){
-    cout<<prime(1,20);
+int main()
+{
+    int n;
+    cin>>n;
+    prime(n);
 }

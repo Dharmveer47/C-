@@ -2,26 +2,27 @@
 using namespace std;
 int main()
 {
-    int a[] = {10, 20, 10, 60,20,50,60,20,50,3,2,4,5,4,1};
-    int d=0;
-    int size=sizeof(a)/sizeof(a[0]);
-    for (int i = 0; i < size; i++)
+    int n;
+    cin >> n;
+    for (int i = 2; i < n; i++)
     {
-        for (int j = i+1; j < size; j++)
+        if (n % i == 0)
         {
-            if (a[i]==a[j])
+            cout << n << " is not prime number ";
+            break;
+        }
+        else
+        {
+            if (n % i!= 0)
             {
-                d++;
+                continue;
             }
-          
-            // else
-            // {
-            //     cout<<"Nothing Dublicate"<<endl;
-            // }
+            else
+            {
+                cout<<n<<" is prime number";
+                break;
+            }
             
         }
-        
-        
     }
-      cout<<"Total Dublicate Value is "<<d<<endl;
 }
